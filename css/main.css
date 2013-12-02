@@ -29,6 +29,24 @@ a         { color: #00a; }
 a:hover   { color: #000; }
 a:visited { color: #a0a; }
 
+/**td { border: solid; } **/
+th {
+        font-size: 13px;
+        font-weight: bold;
+        padding: 8px;
+        background: #B5C7D4;
+        border-bottom: 1px solid #fff;
+        color: #000;
+}
+td {
+        font-size: 13px;
+        font-weight: bold;
+        padding: 8px;
+        background: #B5C7D4;
+        border-bottom: 1px solid #fff;
+        color: #000;
+}
+
 /*****************************************************************************/
 /*
 /* Home
