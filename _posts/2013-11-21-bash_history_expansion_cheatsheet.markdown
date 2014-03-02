@@ -22,7 +22,9 @@ one here for quick reference.
 | !?string? | Refer to the most recent command *containing* "string" | !?ls? |
 | !# | The entire command line type so far | echo !# back at ya |
 
-## Word Designators (Word inside of a particular entry; comes after event designator with a ":")
+## Word Designators - Word Inside Particular History Entry
+
+*Start with a ":" to select word*
 
 | Designator | Purpose | Example | Comments | 
 | -----------|---------|---------|----------|
@@ -35,3 +37,19 @@ one here for quick reference.
 | \* | All words but zeroth | !\* | I.e., all arguments |
 | x\* | All words from x to end | | 
 | x- | All words to end except last word | |
+
+## Word Modifiers
+
+*After the optional word designator, you may use one more more modifiers prefixed with ":"*
+
+_Note: this list is not exhaustive, see manual page for full list_
+
+| Modifier | Purpose | Example |
+|----------|---------|---------|
+| h | Remove file name leaving only directory (head) | !^:h |
+| t | Remove directory leaving only file (tail) | !^:t |
+| r | Remove trailling suffix of form .xxx, leaving only base name | !^:r |
+| e | Remove all but trailing suffix | !^:e |
+| s/old/new/ | Replace old for new in event line. Any deliminator can be used in place of /. "&" means previous word in new substitution | !^:s/old.txt/new.txt/ |
+| & | Repeat the previous substitution | !^:& |
+| g | Apply changes over whole line in conjunction with :s | !^:sg/old/new/ |
